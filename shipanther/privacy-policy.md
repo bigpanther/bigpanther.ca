@@ -19,6 +19,7 @@ Link to privacy policy of third party service providers used by the app
 *   [Google Play Services](https://www.google.com/policies/privacy/)
 *   [Firebase Crashlytics](https://firebase.google.com/support/privacy/)
 *   [Sentry](https://sentry.io/privacy/)
+*   [Google Analytics for Firebase](https://firebase.google.com/policies/analytics)
 
 **Log Data**
 
