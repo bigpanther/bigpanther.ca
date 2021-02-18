@@ -1,0 +1,205 @@
+/*!
+ * Start Bootstrap - One Page Wonder v5.0.8 (https://startbootstrap.com/theme/one-page-wonder)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-one-page-wonder/blob/master/LICENSE)
+ */
+
+body {
+    font-family: 'Lato';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Catamaran';
+    font-weight: 800 !important;
+}
+
+.orange-text {
+    color: #F28600;
+}
+
+.purple-row {
+    background: rgba(51, 69, 254, 0.03);
+}
+
+.profile {
+    width: 48px;
+    height: 48px;
+}
+
+.accordion, .carousel, .contact-row {
+    margin: auto;
+    max-width: 720px;
+}
+
+.carousel-caption {
+    position: initial;
+    color: black;
+    margin: auto;
+}
+
+hr.solid {
+    border-top: 1px solid #999;
+}
+
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 50%;
+}
+
+.footer-link {
+    color: #666;
+    text-transform: uppercase;
+    
+}
+
+.footer-link:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-download {
+    color: #9540FC;
+}
+
+.footer-download:hover, .footer-download:focus{
+    color:#690CDA;
+}
+
+.btn-xl {
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+.rounded-pill {
+    border-radius: 5rem;
+}
+
+.navbar-custom {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-custom .navbar-brand, .footer-brand {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    color: #9540FC;
+}
+
+.navbar-custom .navbar-nav .nav-item .nav-link, .footer-link {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+}
+
+header.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(7rem + 72px);
+    padding-bottom: 7rem;
+    /*  background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header.masthead .masthead-content {
+    z-index: 1;
+    position: relative;
+}
+
+/*
+header.masthead .masthead-content .masthead-subheading {
+  font-size: 3.2rem;
+}
+*/
+
+.hero-row {
+    align-items: center;
+}
+
+
+/*MEDIA QUERIE*/
+
+@media (max-width: 992px) {
+    header.masthead {
+        padding-top: calc(5rem + 55px);
+        padding-bottom: 5rem;
+    }
+
+    /*
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 2.4rem;
+  }
+ 
+*/
+}
+
+
+.btn-outline-primary {
+    border: solid 2px #9540FC;
+    color: #9540FC;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #9540FC;
+    border-color: #9540FC;
+}
+
+.bg-primary {
+    background-color: #ee0979 !important;
+}
+
+.btn-primary {
+    background-color: #ee0979;
+    border-color: #ee0979;
+}
+
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+    background-color: #bd0760 !important;
+    border-color: #bd0760 !important;
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
+}
+
+.btn-secondary {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+}
+
+.btn-secondary:active,
+.btn-secondary:focus,
+.btn-secondary:hover {
+    background-color: #cc5500 !important;
+    border-color: #cc5500 !important;
+}
+
+.btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+}
