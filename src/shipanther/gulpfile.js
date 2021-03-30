@@ -17,9 +17,8 @@ const pkg = require('./package.json');
 
 // Set the banner content
 const banner = ['/*!\n',
-  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' * Licensed under <%= pkg.license %> (https://github.com/StartBootstrap/<%= pkg.name %>/blob/master/LICENSE)\n',
+  ' *  <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
+  ' * Copyright ' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
   ' */\n',
   '\n'
 ].join('');
@@ -43,21 +42,17 @@ function browserSyncReload(done) {
 
 // Clean vendor
 function clean() {
-  return del(["./vendor/"]);
+  return del(["./css"]);
 }
 
-// Bring third party dependencies from node_modules into vendor directory
-function modules() {
-  // Bootstrap
-  var bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
-    .pipe(gulp.dest('./vendor/bootstrap'));
-  // jQuery
-  var jquery = gulp.src([
-      './node_modules/jquery/dist/*',
-      '!./node_modules/jquery/dist/core.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery'));
-  return merge(bootstrap, jquery);
+function cleanRelease() {
+  return del(["../../docs/shipanther/css", "../../docs/shipanther/scss", "../../docs/shipanther/index.html"]);
+}
+
+function release() {
+  return gulp
+    .src(["./cs*/*", "./*img/*", "index.html"])
+    .pipe(gulp.dest("../../docs/shipanther"));
 }
 
 // CSS task
@@ -92,14 +87,14 @@ function watchFiles() {
 }
 
 // Define complex tasks
-const vendor = gulp.series(clean, modules);
-const build = gulp.series(vendor, css);
+const build = gulp.series(css);
+const dist = gulp.series(css, release);
 const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
 
 // Export tasks
 exports.css = css;
 exports.clean = clean;
-exports.vendor = vendor;
 exports.build = build;
+exports.release = dist;
 exports.watch = watch;
 exports.default = build;
